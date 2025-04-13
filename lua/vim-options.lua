@@ -10,6 +10,8 @@ vim.api.nvim_set_keymap('i', '<A-n>', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<A-n>', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<A-n>', '<Esc>', { noremap = true })
 
+vim.opt.shell = 'powershell.exe'
+
 vim.api.nvim_create_user_command("OpenInChrome", function()
     local file = vim.fn.expand('%:p')
     vim.fn.jobstart({ "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", file }, { detach = true })
